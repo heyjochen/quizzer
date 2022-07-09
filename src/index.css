@@ -1,13 +1,123 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #4d5b9e;
+  --green: rgb(149, 215, 162);
+  --red: rgb(247, 218, 220);
+  --white: #f5f7fb;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.intro {
+  text-align: center;
+}
+
+.intro__heading {
+  font-weight: 700;
+  font-size: 2em;
+  margin: 0;
+  color: var(--primary);
+}
+
+.intro__question {
+  margin: 0.5em 0 1em 0;
+  font-size: 1em;
+  color: var(--primary);
+}
+
+.answer {
+  margin: 1em 0;
+}
+
+.question {
+  display: flex;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.answers {
+  margin: 1em 2em 2em 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+  list-style: none;
+}
+
+.answers li {
+  margin: 0;
+  cursor: pointer;
+}
+
+.divider {
+  width: 38em;
+  height: 1px;
+  background-color: #dbdef0;
+}
+
+.button--filled {
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 1em;
+  padding: 1em 2em;
+  font-size: 0.8rem;
+  border: 0;
+}
+
+.button--hollow {
+  background-color: transparent;
+  color: var(--primary);
+  border-radius: 1em;
+  padding: 0.5em 1.5em;
+  font-size: 0.8rem;
+  border: 1px solid var(--primary);
+}
+
+.button--selected {
+  background-color: var(--primary);
+  color: var(--white);
+  border-radius: 1em;
+  padding: 0.5em 1.5em;
+  font-size: 0.8rem;
+  border: 1px solid var(--primary);
+}
+.button--correct {
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 1em;
+  padding: 0.5em 1.5em;
+  font-size: 0.8rem;
+  border: 1px solid var(--green);
+}
+.button--wrong {
+  background-color: var(--red);
+  color: var(--white);
+  border-radius: 1em;
+  padding: 0.5em 1.5em;
+  font-size: 0.8rem;
+  border: 1px solid var(--red);
 }
